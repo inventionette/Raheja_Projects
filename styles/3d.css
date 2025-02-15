@@ -1,0 +1,311 @@
+html {
+    scrollbar-color: rgb(87, 87, 87) #111010; 
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    background-color: rgb(53, 51, 51)
+}
+
+.container {
+    position: absolute; /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180vh;
+    background-color: rgb(53, 51, 51);
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+        height: 75em;
+    }
+}
+
+.navigation {
+    margin: 0 auto;
+    width: 100%;
+    height: 11.5vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(90, 90, 90);
+    z-index: 1;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .navigation a{
+        padding: 1vh 2vh;
+        font-size: 1em;
+        margin-right: 0;
+    }
+}
+
+.thelogo {
+    top: 0;
+    margin-right: 50vw;
+    position: fixed;
+    z-index: 2;
+    width: 30vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .thelogo {
+        top: 2vh;
+        width: 10vh;
+        margin-top: -4vw;
+        z-index: 0;
+    }
+}
+
+.title {
+    color: white;
+    font-size: 7dvb;
+    margin-top: 12dvb;
+    margin-left: 2vw;
+    position: absolute;
+    
+}
+ 
+@media only screen and (max-width: 900px) {
+    .title {
+    color: white;
+    z-index: 15;
+    font-size: 3dvb;
+    margin-top: 4dvb;
+    margin-left: 2vw;
+    position: fixed;
+    }
+}
+
+.information {
+    width: 70vw;
+    height: 143dvh;
+    margin-left: 2vw;
+    margin-top: 21dvb;
+    background-color: rgb(70, 70, 70);
+    z-index: 0;
+    position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+    .information {
+        margin-left: 2vw;
+        height: 190vh;
+        width: 90vw;
+        margin-top: 15dvb;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .information {
+        margin-left: 2vw;
+        width: 70dvw auto;
+    }
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 5vw auto;
+    background-color: rgb(34, 34, 34);
+    z-index: 1;
+    color: white;
+    bottom: 0;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .footer{
+        height: 5dvb auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .footertext {
+        display: inline-block;
+        font-size: 1vw auto;
+        margin-top: 1vw auto;
+        margin-left: 2vw;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .footertext{
+        text-align: center;
+        width: 100%;
+        font-size: 2vw;
+    }
+}
+
+.images {
+    width: 24vw;
+    height: 80dvh;
+    margin-left: 73vw;
+    margin-top: 21dvb;
+    z-index: 0;
+    position: relative;
+}
+
+.i1 {
+    width: 20vw;
+    height: 12svw;
+    margin-left:2vw;
+    margin-top: vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+}
+
+.i2 {
+    width: 20vw;
+    height: 12svw;
+    margin-left:2vw;
+    margin-top: 13vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+}
+
+
+.i3 {
+    width: 20vw;
+    height: 12svw;
+    margin-left:2vw;
+    margin-top: 26vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+}
+
+@media only screen and (max-width: 900px) {
+    .images{
+        width: 85vw;
+        height: 65dvh;
+        margin-left: 1vw;
+        margin-top: 210dvb;
+        z-index: 0;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .i1{
+    width: 80vw;
+    height: 40svw;
+    margin-left:2vw;
+    margin-top: 0vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .i2{
+    width: 80vw;
+    height: 40svw;
+    margin-left:2vw;
+    margin-top: 42vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .i3{
+    width: 80vw;
+    height: 40svw;
+    margin-left:2vw;
+    margin-top: 84vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+    }
+}
+
+.bolden {
+    margin-top: 2vw;
+    padding: 1vw;
+    font-size: 2svh;
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.regular {
+    margin-top: 0vw;
+    padding: 0vw 1vw;
+    font-size: 1.9svh;
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.asset1 {
+    width: 20vw;
+    height: 12svw;
+    margin-left: 0vw;
+    margin-top: 0vw;
+    z-index: 1;
+    position: absolute;
+}
+
+@media only screen and (max-width: 900px) {
+    .asset1{
+    width: 80vw;
+    height: 40svw;
+    margin-left: 0vw;
+    margin-top: 0vw;
+    z-index: 1;
+    position: absolute;
+    }
+}
+
+
+.asset2 {
+    width: 20vw;
+    height: 12svw;
+    margin-left: 0vw;
+    margin-top: 0vw;
+    z-index: 2;
+    position: absolute;
+}
+
+@media only screen and (max-width: 900px) {
+    .asset2{
+    width: 80vw;
+    height: 40svw;
+    margin-left: 0vw;
+    margin-top: 0vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+    }
+}
+
+
+.asset3 {
+    width: 20vw;
+    height: 12svw;
+    margin-left: 0vw;
+    margin-top: 0vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+}
+
+@media only screen and (max-width: 900px) {
+    .asset3{
+    width: 80vw;
+    height: 40svw;
+    margin-left: 0vw;
+    margin-top: 0vw;
+    background-color: rgb(15, 15, 15);
+    z-index: 1;
+    position: absolute;
+    }
+}

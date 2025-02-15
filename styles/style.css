@@ -1,0 +1,872 @@
+:root {
+    --c1: rgb(0, 0, 0);
+    --c2: rgb(53, 51, 51);
+    --c3: rgb(155, 155, 155);
+    --c4: rgb(255, 255, 255);
+    --c5: rgb(53, 46, 49);
+}
+
+html {
+    scrollbar-color: rgb(87, 87, 87) #111010; 
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    background-color: rgb(53, 51, 51);
+    text-decoration: none;
+}
+
+.container {
+    position: absolute; /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210em;
+    background-color: rgb(53, 51, 51);
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+        height: 300em;
+    }
+}
+
+.navigation {
+    margin: 0 auto;
+    width: 100%;
+    height: 11.5vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(90, 90, 90);
+    z-index: 10;
+}
+
+.navigation a {
+    float: right;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 3.5vh;
+    margin-right: 1em;
+    font-size: 2.8dvh;
+    padding: 1vh 5vh;
+    color: white;
+}
+
+.navigation a:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 800px) {
+    .navigation a{
+        padding: 2vh 2vh;
+        font-size: 10px;
+        margin-right: 0;
+    }
+}
+
+.thelogo {
+    margin-top: 0;
+    margin-left: 0;
+    position: fixed;
+    z-index: 12;
+    width: 30vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .thelogo {
+        top: 2vh;
+        width: 20vh;
+        margin-top: 1vw;
+        z-index: 20;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .navigation a{
+        padding: 1vh 2vh;
+        font-size: 1.9em;
+    }
+}
+
+
+.marquee1 {
+    width: 100vw;
+    max-width: 100vw;
+    height: 4dvh;
+    margin-top: 11vh;
+    left: 0;
+    position: fixed;
+    color: white;
+    background-color: black;
+    z-index: 5;
+}
+
+.m {
+    font-size: 2vh;
+    margin-top: 1dvh;
+    float: right;
+    padding: 0vh 5vh;
+}
+
+.m a{
+    color: white;
+}
+
+.m a:hover{
+    color: rgb(167, 167, 167);
+}
+
+.n {
+    font-size: 2vh;
+    margin-top: 1dvh;
+    float: left;
+    padding: 0vh 3vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .n {
+        font-size: 0;
+        color: black;
+    }
+}
+
+.quick {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100dvb;
+        object-fit:cover
+}
+
+.bgtext {
+    top: 9em;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+.title {
+    z-index: 5;
+    color: white;
+    text-align: left;
+    font-size: 2.5vw;
+    font-weight: normal;
+    margin-left: 5vw;
+    margin-top: 3.5em;
+    text-shadow: -1px 1px 2px #000000;
+}
+
+@media only screen and (max-width: 700px) {
+    .title {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .title {
+        font-size: 2.5vw;
+    }
+}
+
+.t2 {
+    margin-top: -3dvw;
+}
+
+.t3 {
+    z-index: 5;
+    color: white;
+    text-align: left;
+    font-size: 1em;
+    margin-left: 5.2vw;
+    margin-top: 22dvw;
+    position: absolute;
+    text-shadow: -1px 1px 2px #000000;
+}
+
+@media only screen and (max-width: 700px) {
+    .t3 {
+        margin-top: 80dvw;
+    }
+}
+
+
+.upfooter {
+    width: 100%;
+    height: 11.5vh auto;
+    padding: 1vh 0vh;
+    margin-top: 100dvb;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    color: rgb(201, 201, 201);
+    text-align: center;
+}
+
+.upfooter a {
+    color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+    .upfootertext {
+        padding: 0vw 0vw;
+        display: inline-block;
+        font-size: 1vw auto;
+        margin-top: 1vw auto;
+        margin-left: 2vw;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .upfootertext{
+        text-align: center;
+        width: 100%;
+        font-size: 2vw;
+    }
+}
+
+#aboutsecshun {
+    margin-top: 10dvb;
+    height: 250dvh;
+    width: 100%;
+    z-index: 2;
+    background-color: rgb(53, 51, 51);
+    color: white;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 500px) {
+    #aboutsecshun {
+        height: 600dvb;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #aboutsecshun {
+        height: 260dvb;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #aboutsecshun {
+        height: 230dvb;
+    }
+}
+
+.abouttitle {
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 3em;
+}
+
+@media only screen and (max-width: 700px) {
+    .abouttitle {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .abouttitle {
+        font-size: 2vw;
+    }
+}
+
+.desc {
+    margin-top: 3em;
+    width: 70%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2vw;
+    margin: 0 auto;
+    line-height: 2vw;
+    display: block;
+    color: white;
+    padding: 3vh 2vw;
+}
+
+@media only screen and (max-width: 700px) {
+    .desc {
+        font-size: 0.9em;
+        line-height: 1.5em;
+        width: 80%
+    }
+}
+
+.serviceboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3dvh;
+    width: 80%;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+.serviceboxes a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .card {
+    height: 250px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    justify-content: center;
+  }
+
+.card:hover {
+        transform: scale(1.035, 1.035);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+      }
+      
+      .card:hover img {
+        transform: translateY(-10px);
+        text-decoration: none;
+      }
+
+.s {
+        position: absolute;
+        top: 0;
+        height: 110%;
+        width: 100%;
+        z-index: -1;
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        object-fit: cover;
+        text-decoration: none;
+}  
+
+.under {
+        color: white;
+        font-size: 24px;
+        margin: 90px 0 0 0px;
+}
+
+.under a{
+    font-style: normal;
+    color: white;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .serviceboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 3dvh;
+            margin: 0 auto;
+            width: 70%;
+        }
+}
+
+@media only screen and (min-width: 1200px) {
+    .under {
+        font-size: 2em;
+        }
+}
+
+.belowabout {
+    display: inline-block;
+}
+
+.belowtext {
+    margin-top: 3em;
+    width: 70%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2vw;
+    margin: 0 auto;
+    line-height: 2vw;
+    display: block;
+    color: white;
+    padding: 3vh 2vw;
+    margin-top: 2em;
+}
+
+@media only screen and (max-width: 700px) {
+    .belowtext {
+        font-size: 0.9em;
+        line-height: 1.5em;
+        width: 80%
+    }
+}
+  .flip > .front,
+  .flip > .back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 1s;
+    transition-property: transform, opacity;
+  }
+
+  .flip > .front {
+    transform: rotateY(0deg);
+  }
+  .flip > .back {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 50vh;
+    transform: rotateY(-180deg);
+  }
+  .flip:hover > .front {
+    transform: rotateY(180deg);
+  }
+  .flip:hover > .back {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  .flip.flip-vertical > .back {
+    transform: rotateX(-180deg);
+  }
+  .flip.flip-vertical:hover > .front {
+    transform: rotateX(180deg);
+  }
+  .flip.flip-vertical:hover > .back {
+    transform: rotateX(0deg);
+  }
+
+  .flip {
+    position: relative;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+    width: 17vw;
+  }
+
+  .flip > .front,
+  .flip > .back {
+    display: block;
+    color: rgb(255, 255, 255);
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 20dvw;
+    padding: 0.5vw 0vh;
+    background: #1a1a1a;
+    border-radius: 2vh;
+  }
+
+  .flip > .front p,
+  .flip > .back p {
+    font-size: 1vw;
+    line-height: 2vw;
+    color: #ffffff;
+  } 
+  
+  .text-shadow {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+    font-size: 1.2vw;
+    margin-top: 8vw;
+  }
+
+@media only screen and (max-width: 800px) {
+    .flip > .front,
+    .flip > .back {
+        position: fixed;
+        font-size: 5vw;
+        color: rgb(5, 5, 5);
+  }
+}
+
+#teamsecshun {
+    width: 100%;
+    background-color: rgb(53, 51, 51);
+    color: white;
+    text-align: center;
+    height: 75dvw;
+
+}
+
+@media only screen and (max-width: 900px) {
+    #teamsecshun {
+        height: 300dvw;
+    }
+}
+
+.teamtitle {
+    display: block;
+    margin-top: 10dvb;
+}
+
+@media only screen and (min-width: 1200px) {
+    #talky {
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #talky {
+        font-size: 7vw;
+    }
+}
+
+.navi {
+    position: absolute;
+    color: white;
+    font-size: 2.5vw;
+    text-decoration: none;
+    margin-left: 8.5vw;
+    margin-top: 12dvw;
+}
+
+.occup {
+    position: absolute;
+    color: white;
+    font-size: 1.3dvw;
+    text-decoration: none;
+    margin-left: 8.5dvw;
+    margin-top: 15dvw;
+}
+
+@media only screen and (max-width: 900px) {
+    .navi {
+        font-size: 4vw;
+        margin-top: 85vw;
+        margin-left: 10%;
+    }
+    .occup {
+        font-size: 0vw;
+    }
+}
+
+
+.mail {
+    position: absolute;
+    color: white;
+    font-size: 1.5dvw;
+    text-decoration: none;
+    margin-left: 70dvw;
+    margin-top: 15dvw;
+}
+
+@media only screen and (max-width: 900px) {
+    .mail {
+        font-size: 2vw;
+        margin-left: 65%;
+        margin-top: 85vw;
+    }
+}
+
+.teampicture {
+    position: absolute;
+    background-color: rgb(22, 21, 21);
+    margin-left: 8dvw;
+    margin-top: 10dvw;
+    height: 30dvw;
+    width: 80dvw;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    .teampicture {
+        margin-top: 0dvw;
+        height: 0dvw;
+    }
+}
+
+.teaminfo {
+    position: absolute;
+    background-color: rgb(134, 134, 134);
+    margin-left: 40dvw;
+    height: 30dvw;
+    width: 40dvw;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 1.2dvw;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .teaminfo {
+    position: absolute;
+    background-color: rgb(134, 134, 134);
+    margin-left: 2dvw;
+    margin-top: 20dvw;
+    height: 110dvw;
+    width: 80dvw;
+    border-radius: 15px;
+    font-size: 3.2vw;
+    text-align: center;
+    text-decoration: none;
+    }
+}
+
+.divider1 {
+    position: absolute;
+    background-color: rgb(95, 95, 95);
+    margin-left: 0dvw;
+    margin-top: 5dvw;
+    height: 0.5dvw;
+    width: 80dvw;
+}
+
+.divider2 {
+    position: absolute;
+    background-color: rgb(95, 95, 95);
+    margin-left: 0dvw;
+    margin-top: 11.5dvw;
+    height: 0.5dvw;
+    width: 80dvw;
+}
+
+@media only screen and (max-width: 900px) {
+    .divider2 {
+        margin-left: 3dvw;
+        margin-top: 140dvw;
+        background-color: rgb(95, 95, 95);
+}
+}
+
+.naman {
+    height: 15dvw;
+    width: 20dvw;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 900px) {
+    .naman {
+        height: 45dvw;
+        width: 80dvw;
+        border-radius: 0px;
+        margin-top: 0dvw;
+    }
+}
+
+
+.navibigicon {
+    margin-top: 0vw;
+    margin-right: 40vw;
+    height: 30dvw;
+    width: 40dvw;
+    border-radius: 15px 0px 0px 15px;
+    object-fit: cover;
+}
+@media only screen and (max-width: 900px) {
+    .navibigicon {
+        height: 0dvw;
+        width: 0vw;
+}
+}
+
+.icon2 {
+    position: absolute;
+    background-color: rgb(22, 21, 21);
+    margin-top: -5dvw;
+    height: 15dvw;
+    width: 20dvw;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    .icon2 {
+        margin-top: 155dvw;
+        margin-left: 4dvw;
+        height: 45dvw;
+        width: 80dvw;
+        border-radius: 4px;
+}
+}
+
+.infa {
+    font-size: 1.2vw;
+    width: 73%;
+    margin-top: 0dvw;
+    margin-left: 21dvw;
+    text-align: left;
+}
+
+.teamname2 {
+    margin-right: 20dvw;
+    margin-top: 7dvw;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 2dvw;
+}
+
+@media only screen and (max-width: 900px) {
+    .infa {
+        margin-top: 205dvw;
+        margin-left: 3dvw;
+        height: 30dvw;
+        width: 80dvw;
+        font-size: 2.5vw;
+        text-align: center;
+}
+}
+
+
+@media only screen and (max-width: 900px) {
+    .teamname2 {
+        margin-left: -30dvw;
+        margin-top: 150dvw;
+        height: 45dvw;
+        width: 30dvw;
+        font-size: 3vw;
+        position: absolute;
+}
+}
+
+#gallery {
+    width: 100%;
+    background-color: rgb(53, 51, 51);
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    #gallery {
+        height: 830dvw;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    #gallery {
+        height: 190dvh;
+        
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #gtitle {
+        font-size: 9vw;
+        padding: 1em
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #gtitle {
+        margin-top: 1vw;
+        font-size: 4vw;
+        padding: 1em;
+    }
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 5vw auto;
+    background-color: rgb(34, 34, 34);
+    z-index: 4;
+    color: white;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .footer{
+        height: 5dvb auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .footertext {
+        display: inline-block;
+        font-size: 1vw auto;
+        margin-top: 1vw auto;
+        margin-left: 2vw;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .footertext{
+        text-align: center;
+        width: 100%;
+        font-size: 2vw;
+    }
+}
+
+.teamtest {
+    width: 90%;
+    margin-left: 2dvw;
+}
+
+
+.gallerybox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-gap: 3dvh;
+    width: 80%;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+
+  .cardy {
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    justify-content: center;
+  }
+
+.card:hover {
+        transform: scale(1.035, 1.035);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+      }
+      
+      .card:hover img {
+        transform: translateY(-10px);
+        text-decoration: none;
+      }
+
+.n {
+        position: absolute;
+        top: 0;
+        height: 110%;
+        width: 100%;
+        z-index: -1;
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        object-fit: cover;
+        text-decoration: none;
+}  
+
+@media only screen and (min-width: 1200px) {
+    .serviceboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 3dvh;
+            margin: 0 auto;
+            width: 70%;
+        }
+}
+
+.droppy {
+    margin-top: -1dvw;
+    float: right;
+}
+
+.dtitle {
+    width: 13dvw;
+}
+
+.color {
+    background-color: rgb(47, 47, 47);
+}
+
+.droppy ul {
+	list-style: none;
+	position: relative;
+    font-size: 1dvw;
+	}
+	
+.droppy a:hover { 
+	color: rgb(0, 0, 0);
+}
