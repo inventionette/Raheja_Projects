@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Stormwater</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            line-height: 1.6;
+            background-image: url(assets/bg.png); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+        }
+
+        /* Overlay to ensure text readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(49, 49, 49, 0.8); /* Semi-transparent white overlay */
+            z-index: -1; /* Places the overlay behind the content */
+        }
+
+        .container {
+            max-width: 1200px; /* Wider container */
+            margin: 50px auto; /* Centered horizontally */
+            background: #6b6b6b;
+            padding: 40px; /* Increased padding for better spacing */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 20px; /* Added spacing between paragraphs */
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center; /* Vertically center the image and text */
+            gap: 40px; /* Space between image and text */
+        }
+
+        .content-wrapper img {
+            max-width: 400px; /* Smaller image width */
+            height: auto;
+            border-radius: 10px;
+            flex-shrink: 0; /* Prevent the image from shrinking */
+        }
+
+        .text-content {
+            flex: 1; /* Allow text to take up remaining space */
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px; /* Add space above the footer */
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: white; /* Ensure text is white */
+        }
+
+        .footer-content .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-content .social-links a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .footer-content .social-links a:hover {
+            opacity: 0.8; /* Add hover effect */
+        }
+
+        .footer-content .contact-info {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc; /* Slightly lighter text for contact info */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column; /* Stack image and text on smaller screens */
+            }
+
+            .content-wrapper img {
+                max-width: 100%; /* Full width for image on mobile */
+            }
+
+            .footer-content .social-links {
+                flex-direction: column; /* Stack social icons on mobile */
+                gap: 10px;
+            }
+        }
+
+        /* Navbar Styles */
+.navbar {
+    background-color: #484949;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link, .dropdown-button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, background 0.3s;
+    display: inline-block;
+}
+
+.nav-link:hover, .dropdown-button:hover {
+    color: #000000;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu .dropdown-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: background 0.3s;
+    text-align: left;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffffff;
+    color: rgb(107, 107, 107);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Mobile Menu */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(253, 253, 253);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+    </style>
+    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container1">
+            <a href="index.html">
+                <img src="assets/newlogo.png" alt="Logo" class="logo">
+            </a>
+            <button id="menu-btn" class="menu-button">☰</button>
+            <ul id="menu" class="menu">
+                <li><a href="aboutus.html" target="_blank" class="nav-link">About</a></li>
+                <li><a href="ourteam.html" target="_blank" class="nav-link">Our Team</a></li>
+                <li class="dropdown">
+                    <button id="desktop-dropdown-btn" class="nav-link">What We Do</button>
+                    <ul id="desktop-dropdown" class="dropdown-menu">
+                        <li><a href="test.html" target="_blank" class="dropdown-item">Planning</a></li>
+                        <li><a href="design.html" target="_blank" class="dropdown-item">Design</a></li>
+                        <li><a href="ecology.html" target="_blank" class="dropdown-item">Ecology</a></li>
+                        <li><a href="geotech.html" target="_blank" class="dropdown-item">Geotech Services</a></li>
+                        <li><a href="bushfire.html" target="_blank" class="dropdown-item">Bushfire</a></li>
+                        <li><a href="stormwater.html" target="_blank" class="dropdown-item">Stormwater</a></li>
+                        <li><a href="structuraldesign.html" target="_blank" class="dropdown-item">Structural Design</a></li>
+                        <li><a href="da.html"  target="_blank" class="dropdown-item">DA Approvals</a></li>
+                        <li><a href="cc.html"  target="_blank" class="dropdown-item">CC Approvals</a></li>
+                        <li><a href="anim.html"  target="_blank" class="dropdown-item">3D Animation</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html" target="_blank" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" target="_blank" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="aboutus.html" class="nav-link">About</a>
+            <div class="dropdown">
+                <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
+                <ul id="mobile-dropdown" class="dropdown-menu">
+                    <li><a href="test.html" class="dropdown-item">Planning</a></li>
+                    <li><a href="design.html" class="dropdown-item">Design</a></li>
+                    <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                    <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                    <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
+                    <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
+                    <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
+                    <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
+                    <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
+                    <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
+                </ul>
+            </div>
+            <a href="ourteam.css" class="nav-link">Our Team</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+        const desktopDropdownBtn = document.getElementById('desktop-dropdown-btn');
+        const desktopDropdown = document.getElementById('desktop-dropdown');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileDropdownBtn.addEventListener('click', () => {
+            mobileDropdown.classList.toggle('active');
+        });
+
+        desktopDropdownBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            desktopDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!desktopDropdown.contains(event.target) && event.target !== desktopDropdownBtn) {
+                desktopDropdown.classList.remove('active');
+            }
+        });
+    </script>
+<div class="container">
+    <h1>Stormwater</h1>
+    <div class="content-wrapper">
+        <img src="assets/6.png" alt="Service Image"> <!-- Smaller image -->
+        <div class="text-content">
+            <p>
+                Our team of experienced engineers and environmental specialists is dedicated to designing and implementing infrastructure that not only meets functional and regulatory requirements but also protects and enhances the natural water cycle. From initial planning to final construction, we combine technical expertise, advanced technology, and a commitment to sustainability to ensure your project is resilient, efficient, and environmentally responsible.
+            </p>
+        </div>
+    </div>
+    <h2>Comprehensive Stormwater Engineering Solutions</h2>
+    <p>
+        We deliver tailored bushfire management services to safeguard lives, property, and ecosystems. Our expert team supports you through every stage, from risk assessments to implementation, ensuring compliance and resilience against fire threats.
+    </p>
+    
+    <h2>Stormwater Management Planning</h2>
+    <p>
+        Our plans are tailored to the unique characteristics of your site, including topography, soil types, and climatic conditions, while adhering to local, state, and federal guidelines. Whether you’re planning a residential development, commercial complex, or large-scale infrastructure project, our SMPs provide a clear roadmap for effective stormwater management.
+    </p>
+    
+    <h2>Flood Risk Assessments and Mitigation</h2>
+    <p>
+        Our team conducts comprehensive flood risk assessments to identify potential vulnerabilities and deliver tailored mitigation strategies. We analyze floodplains, drainage patterns, and climate data to design solutions that safeguard your development and surrounding areas.
+    </p>
+    
+    <h2>Regulatory Compliance and Development Approvals</h2>
+    <p>
+        Navigating the complex regulatory landscape can be challenging, but our team is here to help. We assist with development approvals, permits, and compliance for stormwater and drainage systems, ensuring your project meets all local, state, and federal standards.
+    </p>
+    
+    <h2>Erosion and Sediment Control</h2>
+    <p>
+        Our team provides Erosion and Sediment Control Plans (ESCPs) tailored to local soil conditions, climatic factors, and project requirements. We design measures such as silt fences, sediment traps, and stabilization techniques to prevent soil erosion and sediment runoff during construction.
+    </p>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>Check out our socials!</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61572940686095" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/rahejaprojects/?hl=en" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/raheja-project/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p class="contact-info">Raheja Projects Pty Ltd ABN: 43 671 450 285 | 0401835568 | navneet@raheja.au<br>Located on the Central Coast</p>
+    </div>
+</footer>
+
+</body>
+</html>

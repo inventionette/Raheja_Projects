@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Raheja Projects</title>
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container1">
+            <a href="index.html">
+                <img src="assets/newlogo.png" alt="Logo" class="logo">
+            </a>
+            <button id="menu-btn" class="menu-button">☰</button>
+            <ul id="menu" class="menu">
+                <li><a href="aboutus.html" target="_blank" class="nav-link">About</a></li>
+                <li><a href="ourteam.html" target="_blank" class="nav-link">Our Team</a></li>
+                <li class="dropdown">
+                    <button id="desktop-dropdown-btn" class="nav-link">What We Do</button>
+                    <ul id="desktop-dropdown" class="dropdown-menu">
+                        <li><a href="test.html" target="_blank" class="dropdown-item">Planning</a></li>
+                        <li><a href="design.html" target="_blank" class="dropdown-item">Design</a></li>
+                        <li><a href="ecology.html" target="_blank" class="dropdown-item">Ecology</a></li>
+                        <li><a href="geotech.html" target="_blank" class="dropdown-item">Geotech Services</a></li>
+                        <li><a href="bushfire.html" target="_blank" class="dropdown-item">Bushfire</a></li>
+                        <li><a href="stormwater.html"  target="_blank" class="dropdown-item">Stormwater</a></li>
+                        <li><a href="structuraldesign.html" target="_blank" class="dropdown-item">Structural Design</a></li>
+                        <li><a href="da.html" target="_blank" class="dropdown-item">DA Approvals</a></li>
+                        <li><a href="cc.html" target="_blank" class="dropdown-item">CC Approvals</a></li>
+                        <li><a href="anim.html" target="_blank" class="dropdown-item">3D Animation</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html" target="_blank" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" target="_blank" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="aboutus.html" class="nav-link">About</a>
+            <div class="dropdown">
+                <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
+                <ul id="mobile-dropdown" class="dropdown-menu">
+                    <li><a href="test.html" class="dropdown-item">Planning</a></li>
+                    <li><a href="design.html" class="dropdown-item">Design</a></li>
+                    <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                    <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                    <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
+                    <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
+                    <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
+                    <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
+                    <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
+                    <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
+                </ul>
+            </div>
+            <a href="ourteam.html" class="nav-link">Our Team</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+        const desktopDropdownBtn = document.getElementById('desktop-dropdown-btn');
+        const desktopDropdown = document.getElementById('desktop-dropdown');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileDropdownBtn.addEventListener('click', () => {
+            mobileDropdown.classList.toggle('active');
+        });
+
+        desktopDropdownBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            desktopDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!desktopDropdown.contains(event.target) && event.target !== desktopDropdownBtn) {
+                desktopDropdown.classList.remove('active');
+            }
+        });
+    </script>
+
+
+
+
+
+<div class="containercontact">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Whether you have a question about our services, want to discuss a project, or just want to say hello, our team is here to help. Reach out to us using the form below or through our contact details.</p>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+        <p><strong>Phone:</strong> 0401 835 568</p>
+        <p><strong>Email:</strong> navneet@raheja.au</p>
+        <p><strong>Address:</strong> 25 Cassinia Cl, Lisarow NSW 2250</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" action="https://formspree.io/f/xwplkwwd" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+
+    <!-- Map -->
+    <div class="map">
+        <h2>Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6662.646819591776!2d151.36652487634046!3d-33.38872577341403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b72cb068caf9011%3A0x2b72a632a8e72de8!2s25%20Cassinia%20Cl%2C%20Lisarow%20NSW%202250!5e0!3m2!1sen!2sau!4v1741782165020!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <p>Check out our socials!</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61572940686095" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/rahejaprojects/?hl=en" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/raheja-project/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p class="contact-info">Raheja Projects Pty Ltd ABN: 43 671 450 285 | 0401835568 | navneet@raheja.au<br>Located on the Central Coast</p>
+    </div>
+</footer>
+
+</body>
+</html>

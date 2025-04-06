@@ -1,0 +1,300 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    line-height: 1.6;
+    background-image: url(assets/bg.png); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.8); /* Semi-transparent white overlay */
+    z-index: -1; /* Places the overlay behind the content */
+}
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px; /* Add space above the footer */
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: white; /* Ensure text is white */
+        }
+
+        .footer-content .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-content .social-links a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .footer-content .social-links a:hover {
+            opacity: 0.8; /* Add hover effect */
+        }
+
+        .footer-content .contact-info {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc; /* Slightly lighter text for contact info */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-content .social-links {
+                flex-direction: column; /* Stack social icons on mobile */
+                gap: 10px;
+            }
+        }
+
+        /* Navbar Styles */
+.navbar {
+    background-color: #484949;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link, .dropdown-button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, background 0.3s;
+    display: inline-block;
+}
+
+.nav-link:hover, .dropdown-button:hover {
+    color: #000000;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu .dropdown-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: background 0.3s;
+    text-align: left;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffffff;
+    color: rgb(107, 107, 107);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Mobile Menu */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(253, 253, 253);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+
+}
+
+.projects-section {
+    padding: 40px 20px; /* Add spacing around the section */
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px; /* Spacing between cards */
+    max-width: 1200px; /* Limit the width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 15px;
+}
+
+.project-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 0 15px 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+    }
+
+    .project-card img {
+        height: 180px; /* Adjust image height for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* 1 card per row for smaller devices */
+    }
+
+    .project-card img {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+
+    .project-card h3 {
+        font-size: 1.1rem; /* Adjust font size for smaller screens */
+    }
+
+    .project-card p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 20px 10px; /* Reduce padding for very small screens */
+    }
+
+    .project-card img {
+        height: 120px; /* Further reduce image height for very small screens */
+    }
+
+    .project-card h3 {
+        font-size: 1rem; /* Adjust font size for very small screens */
+    }
+
+    .project-card p {
+        font-size: 0.8rem; /* Adjust font size for very small screens */
+    }
+}
+
+.section-title {
+    font-size: 3rem;
+}

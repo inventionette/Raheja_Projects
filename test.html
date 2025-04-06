@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Planning</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            line-height: 1.6;
+            background-image: url(assets/bg.png); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+        }
+
+        /* Overlay to ensure text readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(49, 49, 49, 0.8); /* Semi-transparent white overlay */
+            z-index: -1; /* Places the overlay behind the content */
+        }
+
+        .container {
+            max-width: 1200px; /* Wider container */
+            margin: 50px auto; /* Centered horizontally */
+            background: #6b6b6b;
+            padding: 40px; /* Increased padding for better spacing */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 20px; /* Added spacing between paragraphs */
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center; /* Vertically center the image and text */
+            gap: 40px; /* Space between image and text */
+        }
+
+        .content-wrapper img {
+            max-width: 400px; /* Smaller image width */
+            height: auto;
+            border-radius: 10px;
+            flex-shrink: 0; /* Prevent the image from shrinking */
+        }
+
+        .text-content {
+            flex: 1; /* Allow text to take up remaining space */
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px; /* Add space above the footer */
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: white; /* Ensure text is white */
+        }
+
+        .footer-content .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-content .social-links a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .footer-content .social-links a:hover {
+            opacity: 0.8; /* Add hover effect */
+        }
+
+        .footer-content .contact-info {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc; /* Slightly lighter text for contact info */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column; /* Stack image and text on smaller screens */
+            }
+
+            .content-wrapper img {
+                max-width: 100%; /* Full width for image on mobile */
+            }
+
+            .footer-content .social-links {
+                flex-direction: column; /* Stack social icons on mobile */
+                gap: 10px;
+            }
+        }
+
+        /* Navbar Styles */
+.navbar {
+    background-color: #484949;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link, .dropdown-button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, background 0.3s;
+    display: inline-block;
+}
+
+.nav-link:hover, .dropdown-button:hover {
+    color: #000000;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-menu .dropdown-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: background 0.3s;
+    text-align: left;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ffffff;
+    color: rgb(107, 107, 107);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Mobile Menu */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(253, 253, 253);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+
+}
+
+    </style>
+    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container1">
+            <a href="index.html">
+                <img src="assets/newlogo.png" alt="Logo" class="logo">
+            </a>
+            <button id="menu-btn" class="menu-button">☰</button>
+            <ul id="menu" class="menu">
+                <li><a href="aboutus.html" target="_blank" class="nav-link">About</a></li>
+                <li><a href="ourteam.html" target="_blank" class="nav-link">Our Team</a></li>
+                <li class="dropdown">
+                    <button id="desktop-dropdown-btn" class="nav-link">What We Do</button>
+                    <ul id="desktop-dropdown" class="dropdown-menu">
+                        <li><a href="test.html" target="_blank" class="dropdown-item">Planning</a></li>
+                        <li><a href="design.html" target="_blank" class="dropdown-item">Design</a></li>
+                        <li><a href="ecology.html" target="_blank" class="dropdown-item">Ecology</a></li>
+                        <li><a href="geotech.html" target="_blank" class="dropdown-item">Geotech Services</a></li>
+                        <li><a href="bushfire.html" target="_blank" class="dropdown-item">Bushfire</a></li>
+                        <li><a href="stormwater.html" target="_blank" class="dropdown-item">Stormwater</a></li>
+                        <li><a href="structuraldesign.html" target="_blank" class="dropdown-item">Structural Design</a></li>
+                        <li><a href="da.html" target="_blank" class="dropdown-item">DA Approvals</a></li>
+                        <li><a href="cc.html" target="_blank" class="dropdown-item">CC Approvals</a></li>
+                        <li><a href="anim.html" target="_blank" class="dropdown-item">3D Animation</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html" target="_blank" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" target="_blank" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="aboutus.html" class="nav-link">About</a>
+            <div class="dropdown">
+                <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
+                <ul id="mobile-dropdown" class="dropdown-menu">
+                    <li><a href="test.html" class="dropdown-item">Planning</a></li>
+                    <li><a href="design.html" class="dropdown-item">Design</a></li>
+                    <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                    <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                    <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
+                    <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
+                    <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
+                    <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
+                    <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
+                    <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
+                </ul>
+            </div>
+            <a href="ourteam.css" class="nav-link">Our Team</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+        const desktopDropdownBtn = document.getElementById('desktop-dropdown-btn');
+        const desktopDropdown = document.getElementById('desktop-dropdown');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileDropdownBtn.addEventListener('click', () => {
+            mobileDropdown.classList.toggle('active');
+        });
+
+        desktopDropdownBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            desktopDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!desktopDropdown.contains(event.target) && event.target !== desktopDropdownBtn) {
+                desktopDropdown.classList.remove('active');
+            }
+        });
+    </script>
+<div class="container">
+    <h1>Planning</h1>
+    <div class="content-wrapper">
+        <img src="assets/1.png" alt="Service Image"> <!-- Smaller image -->
+        <div class="text-content">
+            <p>
+                With years of experience in the industry, our team of experts excels in creating detailed, forward-thinking plans that address the unique challenges of each project. From initial concept development to final approvals, we provide end-to-end planning services that align with your goals, regulatory requirements, and environmental considerations.
+            </p>
+            <p>
+                Our approach is simple yet effective. We begin by understanding your specific requirements and challenges. This allows us to design customized 
+                solutions that are not only effective but also scalable and future-proof. 
+            </p>
+        </div>
+    </div>
+    <h2>Comprehensive Town Planning Advice</h2>
+    <p>
+        We offer expert town planning services that ensure your development is compliant, efficient, and sustainable. Our advice covers every aspect of the planning process, guiding your project from concept to approval.
+    </p>
+    
+    <h2>Navigating Zoning and Land Use Regulations</h2>
+    <p>
+        Understanding zoning and land use regulations is essential for any development. We provide advice on the appropriate zoning for your site and ensure compliance with local planning schemes, including land use restrictions, heritage overlays, and environmental considerations.
+    </p>
+    
+    <h2>Development Application (DA) Support</h2>
+    <p>
+        We assist in preparing and submitting Development Applications (DAs), ensuring all required documentation is accurate and complete. Our team manages communications with councils and stakeholders, ensuring a smooth and timely approval process.
+    </p>
+    
+    <h2>Sustainable Planning and Environmental Considerations</h2>
+    <p>
+        We incorporate sustainable practices into your project, from green spaces to energy-efficient design. Our advice helps reduce environmental impact while ensuring compliance with environmental regulations and conducting necessary impact assessments.
+    </p>
+    
+    <h2>Stakeholder Engagement and Community Consultation</h2>
+    <p>
+        We help facilitate stakeholder and community consultations to address concerns early and foster positive relationships. Engaging with local residents and businesses ensures smoother approvals and greater community support for your project.
+    </p>
+    
+
+    <h2>Heritage and Cultural Considerations</h2>
+    <p>
+        Our team provides guidance on complying with heritage and cultural regulations, ensuring your development respects significant cultural assets while meeting planning requirements and maintaining project goals.
+    </p>
+    
+
+    <h2>Infrastructure Planning and Utilities</h2>
+    <p>
+        We assist in planning and integrating essential infrastructure, such as roads, sewage, water supply, and utilities. Ensuring your development is well-connected and efficient is key to its long-term success.
+    </p>
+
+
+    <h2>Long-Term Vision and Future Growth</h2>
+    <p>
+        We consider long-term growth and future community needs in our planning advice. By anticipating changes in land use and infrastructure, we ensure your project remains adaptable and relevant in the years to come.
+    </p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>Check out our socials!</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61572940686095" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/rahejaprojects/?hl=en" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/raheja-project/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p class="contact-info">Raheja Projects Pty Ltd ABN: 43 671 450 285 | 0401835568 | navneet@raheja.au<br>Located on the Central Coast</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+html a {
+    color: white;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+        height: 300em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navigation a{
+        font-size: 9px;
+        margin-right: 25px;
+
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    li {
+        padding: 2dvh 2dvh;
+        display: block;
+}
+}
+
+@media only screen and (max-width: 700px) {
+    .logo {
+        top: 0vh;
+        width: 15vh;
+        margin-top: 1vw;
+        margin-left: 1vw;
+        z-index: 20;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .marquee1 {
+    width: 100vw;
+    max-width: 100vw;
+    height: 3vh;
+    max-height: 3vh;
+    top: 10vh;
+    left: 0;
+    position: fixed;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .m {
+        font-size: 1.4vh;
+        top: 0dvh;
+        float: right;
+        padding: 0vh 3vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .bgg {
+        background-size: auto;
+        background-attachment: scroll;
+        object-fit: cover;
+    }
+    }
+
