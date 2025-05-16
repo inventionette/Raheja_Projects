@@ -1,4 +1,4 @@
-/* general styles */
+/* General Styles */
 html, body {
     height: 100%; 
     margin: 0;
@@ -9,16 +9,12 @@ html, body {
     background-color: #3b3b3b;
 }
 
-html {
-    overflow-y: hidden; /* no vertical scrolling */
-}
-
 body {
-    flex: 1; 
+    flex: 1; /* Allows the body to grow and fill the space */
     display: flex;
-    flex-direction: column; /* stacks elements vertically */
-    overflow: hidden; /* no content overflow */
-    overflow-y: auto; 
+    flex-direction: column; /* Stack elements vertically */
+    overflow: hidden; /* Prevents content overflow */
+    overflow-y: auto; /* Allows scrolling only for the body content */
 }
 
 body::after {
@@ -33,18 +29,20 @@ a {
     text-decoration: none;
 }
 
-/* main content wrapper */
+/* Main content wrapper */
 .main-content {
-    flex: 1; /* pushes the footer to the bottom */
+    flex: 1; /* Pushes the footer to the bottom */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    overflow: auto; 
+    justify-content: space-between; /* Ensures sections stay together */
+    overflow: auto; /* Allows scrolling if content overflows */
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* landing Page */
+/* Landing Page */
 .landing {
-    flex: 1;
+    flex: 1; /* Ensures it stretches to fill available space */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +88,7 @@ a {
     text-align: center;
     padding: 10px;
     font-size: 1rem;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevents it from shrinking */
 }
 
 .statement {
@@ -102,19 +100,22 @@ a {
 }
 
 .frontlogo {
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
 }
 
-
+/* Footer Styles */
 .footer {
     background-color: #101010;
     color: white;
     text-align: center;
     padding: 20px;
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Prevents the footer from shrinking */
 }
 
-/* responsive */
+/* Responsive Styles */
 
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
