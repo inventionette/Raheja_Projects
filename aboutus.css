@@ -68,6 +68,7 @@ body::before {
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
     display: inline-block;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link:hover, .dropdown-button:hover {
