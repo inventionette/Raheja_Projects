@@ -14,105 +14,101 @@
 
 <body>
     <nav class="navbar">
-    <div class="container">
-        <a href="index.html"><img src="assets/newlogo.png" alt="Logo" class="logo"></a>
+        <div class="container1">
+            <a href="index.html">
+                <img src="assets/newlogo.png" alt="Logo" class="logo">
+            </a>
             <button id="menu-btn" class="menu-button">☰</button>
-        <ul id="menu" class="menu">
-        <li><a href="aboutus.html" class="nav-link">About</a></li>
-        <li><a href="ourteam.html" class="nav-link">Our Team</a></li>
-        <li class="dropdown">
-        <button id="desktop-dropdown-btn" class="nav-link">What We Do</button>
-        <ul id="desktop-dropdown" class="dropdown-menu">
-            <li><a href="test.html" class="dropdown-item">Planning</a></li>
-                <li><a href="design.html" class="dropdown-item">Design</a></li>
-                <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
-                <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
-                <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
-                <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
-                <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
-                <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
-                <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
-                <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
-        </ul>
+            <ul id="menu" class="menu">
+                <li><a href="aboutus.html"  class="nav-link">About</a></li>
+                <li><a href="ourteam.html" class="nav-link">Our Team</a></li>
+                <li class="dropdown">
+                    <button id="desktop-dropdown-btn" class="nav-link">What We Do</button>
+                    <ul id="desktop-dropdown" class="dropdown-menu">
+                        <li><a href="test.html"  class="dropdown-item">Planning</a></li>
+                        <li><a href="design.html"  class="dropdown-item">Design</a></li>
+                        <li><a href="ecology.html"  class="dropdown-item">Ecology</a></li>
+                        <li><a href="geotech.html"  class="dropdown-item">Geotech Services</a></li>
+                        <li><a href="bushfire.html"  class="dropdown-item">Bushfire</a></li>
+                        <li><a href="stormwater.html"  class="dropdown-item">Stormwater</a></li>
+                        <li><a href="structuraldesign.html"  class="dropdown-item">Structural Design</a></li>
+                        <li><a href="da.html"  class="dropdown-item">DA Approvals</a></li>
+                        <li><a href="cc.html"  class="dropdown-item">CC Approvals</a></li>
+                        <li><a href="anim.html"  class="dropdown-item">3D Animation</a></li>
+                    </ul>
                 </li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-    </div>
-    </nav>
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="aboutus.html" class="nav-link">About</a>
-        <div class="dropdown">
-            <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
-            <ul id="mobile-dropdown" class="dropdown-menu">
-                <li><a href="test.html" class="dropdown-item">Planning</a></li>
-                <li><a href="design.html" class="dropdown-item">Design</a></li>
-                <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
-                <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
-                <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
-                <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
-                <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
-                <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
-                <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
-                <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
+                <li><a href="projects.html"  class="nav-link">Projects</a></li>
+                <li><a href="contact.html"  class="nav-link">Contact</a></li>
             </ul>
         </div>
-
-
-    <a href="ourteam.css" class="nav-link">Our Team</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="aboutus.html" class="nav-link">About</a>
+            <div class="dropdown">
+                <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
+                <ul id="mobile-dropdown" class="dropdown-menu">
+                    <li><a href="test.html" class="dropdown-item">Planning</a></li>
+                    <li><a href="design.html" class="dropdown-item">Design</a></li>
+                    <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                    <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                    <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
+                    <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
+                    <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
+                    <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
+                    <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
+                    <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
+                </ul>
+            </div>
+            <a href="ourteam.html" class="nav-link">Our Team</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
     </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+        const desktopDropdownBtn = document.getElementById('desktop-dropdown-btn');
+        const desktopDropdown = document.getElementById('desktop-dropdown');
 
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
 
+        mobileDropdownBtn.addEventListener('click', () => {
+            mobileDropdown.classList.toggle('active');
+        });
 
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
-    const mobileDropdown = document.getElementById('mobile-dropdown');
-    const desktopDropdownBtn = document.getElementById('desktop-dropdown-btn');
-    const desktopDropdown = document.getElementById('desktop-dropdown');
+        desktopDropdownBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            desktopDropdown.classList.toggle('active');
+        });
 
-    menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    });
-
-    mobileDropdownBtn.addEventListener('click', () => {
-    mobileDropdown.classList.toggle('active');
-    });
-
-    desktopDropdownBtn.addEventListener('click', (event) => {
-    event.stopPropagation();
-    desktopDropdown.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!desktopDropdown.contains(event.target) && event.target !== desktopDropdownBtn) {
-            desktopDropdown.classList.remove('active');
-    }
-    });
-</script>
+        document.addEventListener('click', (event) => {
+            if (!desktopDropdown.contains(event.target) && event.target !== desktopDropdownBtn) {
+                desktopDropdown.classList.remove('active');
+            }
+        });
+    </script>
 
 
 
 
 
-   <!-- main content -->
-<div class="main-content">
+   <!-- Main Content -->
+   <div class="main-content">
     <section class="landing">
-    <img src="assets/newlogo-removebg-preview.png" alt="Our logo" class="frontlogo">
-    <p>Your Project, Our Expertise. <br> From Inception, to Completion.</p>
-    <div class="statement">
+        <img src="assets/newlogo-removebg-preview.png" alt="Our logo" class="frontlogo">
+        <p>Your Project, Our Expertise. <br> From Inception, to Completion.</p>
+        <div class="statement">
             We act as a trusted client representative, providing regular progress updates and reports, and facilitating seamless communication among consultants, contractors, and regulatory authorities.
-    </div>
+        </div>
     </section>
 
     <section class="text-block">
-    <p>
-        Raheja Projects works on Darkinjung country and acknowledges them as the Traditional Custodians of the land. We pay our respects to Elders, past present and emerging. Here is a link to the
-    <a href="https://www.darkinjung.com.au" target="_blank">Darkinjung Land Council.</a>
-    </p>
+        <p>
+            Raheja Projects works on Darkinjung country and acknowledges them as the Traditional Custodians of the land. We pay our respects to Elders, past present and emerging. Here is a link to the
+            <a href="https://www.darkinjung.com.au" target="_blank">Darkinjung Land Council.</a>
+        </p>
     </section>
 </div>
 
@@ -120,16 +116,16 @@
 
 <footer style="background-color: #222; color: white; padding: 20px 0; text-align: center;">
 <div style="max-width: 1200px; margin: auto; display: flex; flex-direction: column; align-items: center;">
-    <p style="margin: 5px 0; font-size: 18px;">Check out our socials!</p>
+        <p style="margin: 5px 0; font-size: 18px;">Check out our socials!</p>
     <div style="display: flex; gap: 15px; margin-top: 10px;">
 
 
 
-    <a href="https://www.facebook.com/profile.php?id=61572940686095" target="_blank" style="color: white; font-size: 24px; text-decoration: none;"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/rahejaprojects/?hl=en" target="_blank" style="color: white; font-size: 24px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/company/raheja-project/" target="_blank" style="color: white; font-size: 24px; text-decoration: none;"><i class="fab fa-linkedin"></i> </a>
+        <a href="https://www.facebook.com/profile.php?id=61572940686095" target="_blank" style="color: white; font-size: 24px; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/rahejaprojects/?hl=en" target="_blank" style="color: white; font-size: 24px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/raheja-project/" target="_blank" style="color: white; font-size: 24px; text-decoration: none;"><i class="fab fa-linkedin"></i> </a>
     </div>
-    <p style="margin-top: 15px; font-size: 14px;">Raheja Projects Pty Ltd ABN: 43 671 450 285 m | 0401835568 e | navneet@raheja.au
+        <p style="margin-top: 15px; font-size: 14px;">Raheja Projects Pty Ltd ABN: 43 671 450 285 m | 0401835568 e | navneet@raheja.au
             located on the Central Coast</p>
 </div>
 </footer>
