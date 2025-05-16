@@ -13,56 +13,60 @@
 
 
 <body>
-     <nav class="navbar">
-        <div class="container1">
-            <a href="index.html">
-                <img src="assets/newlogo.png" alt="Logo" class="logo">
-            </a>
+       <nav class="navbar">
+        <div class="container">
+            <a href="index.html"><img src="assets/newlogo.png" alt="Logo" class="logo"></a>
             <button id="menu-btn" class="menu-button">☰</button>
             <ul id="menu" class="menu">
-                <li><a href="aboutus.html"  class="nav-link">About</a></li>
+                <li><a href="aboutus.html" class="nav-link">About</a></li>
                 <li><a href="ourteam.html" class="nav-link">Our Team</a></li>
                 <li class="dropdown">
                     <button id="desktop-dropdown-btn" class="nav-link">What We Do</button>
                     <ul id="desktop-dropdown" class="dropdown-menu">
-                        <li><a href="test.html"  class="dropdown-item">Planning</a></li>
-                        <li><a href="design.html"  class="dropdown-item">Design</a></li>
-                        <li><a href="ecology.html"  class="dropdown-item">Ecology</a></li>
-                        <li><a href="geotech.html"  class="dropdown-item">Geotech Services</a></li>
-                        <li><a href="bushfire.html"  class="dropdown-item">Bushfire</a></li>
-                        <li><a href="stormwater.html"  class="dropdown-item">Stormwater</a></li>
-                        <li><a href="structuraldesign.html"  class="dropdown-item">Structural Design</a></li>
-                        <li><a href="da.html"  class="dropdown-item">DA Approvals</a></li>
-                        <li><a href="cc.html"  class="dropdown-item">CC Approvals</a></li>
-                        <li><a href="anim.html"  class="dropdown-item">3D Animation</a></li>
+                        <li><a href="test.html" class="dropdown-item">Planning</a></li>
+                        <li><a href="design.html" class="dropdown-item">Design</a></li>
+                        <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                        <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                        <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
+                        <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
+                        <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
+                        <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
+                        <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
+                        <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
                     </ul>
                 </li>
-                <li><a href="projects.html"  class="nav-link">Projects</a></li>
-                <li><a href="contact.html"  class="nav-link">Contact</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="aboutus.html" class="nav-link">About</a>
-            <div class="dropdown">
-                <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
-                <ul id="mobile-dropdown" class="dropdown-menu">
-                    <li><a href="test.html" class="dropdown-item">Planning</a></li>
-                    <li><a href="design.html" class="dropdown-item">Design</a></li>
-                    <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
-                    <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
-                    <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
-                    <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
-                    <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
-                    <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
-                    <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
-                    <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
-                </ul>
-            </div>
-            <a href="ourteam.html" class="nav-link">Our Team</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </div>
     </nav>
-    <script>
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="aboutus.html" class="nav-link">About</a>
+        <div class="dropdown">
+            <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
+            <ul id="mobile-dropdown" class="dropdown-menu">
+                <li><a href="test.html" class="dropdown-item">Planning</a></li>
+                <li><a href="design.html" class="dropdown-item">Design</a></li>
+                <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
+                <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
+                <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
+                <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
+                <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
+                <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
+            </ul>
+        </div>
+
+
+        <a href="ourteam.css" class="nav-link">Our Team</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    </nav>
+
+
+
+<script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
@@ -88,7 +92,8 @@
                 desktopDropdown.classList.remove('active');
             }
         });
-    </script>
+ </script>
+
 
 
 
