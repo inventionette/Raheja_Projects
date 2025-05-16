@@ -39,60 +39,68 @@
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
-    </nav>
-    <div id="mobile-menu" class="mobile-menu">
-        <a href="aboutus.html" class="nav-link">About</a>
-        <div class="dropdown">
-            <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
-            <ul id="mobile-dropdown" class="dropdown-menu">
-                <li><a href="test.html" class="dropdown-item">Planning</a></li>
-                <li><a href="design.html" class="dropdown-item">Design</a></li>
-                <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
-                <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
-                <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
-                <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
-                <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
-                <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
-                <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
-                <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
-            </ul>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="aboutus.html" class="nav-link">About</a>
+            <div class="dropdown">
+                <button id="mobile-dropdown-btn" class="nav-link">What We Do</button>
+                <ul id="mobile-dropdown" class="dropdown-menu">
+                    <li><a href="test.html" class="dropdown-item">Planning</a></li>
+                    <li><a href="design.html" class="dropdown-item">Design</a></li>
+                    <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                    <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                    <li><a href="bushfire.html" class="dropdown-item">Bushfire</a></li>
+                    <li><a href="stormwater.html" class="dropdown-item">Stormwater</a></li>
+                    <li><a href="structuraldesign.html" class="dropdown-item">Structural Design</a></li>
+                    <li><a href="da.html" class="dropdown-item">DA Approvals</a></li>
+                    <li><a href="cc.html" class="dropdown-item">CC Approvals</a></li>
+                    <li><a href="anim.html" class="dropdown-item">3D Animation</a></li>
+                </ul>
+            </div>
+            <a href="ourteam.html" class="nav-link">Our Team</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </div>
-
-
-        <a href="ourteam.css" class="nav-link">Our Team</a>
-        <a href="contact.html" class="nav-link">Contact</a>
     </div>
     </nav>
+    
 
 
 
-<script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
-        const mobileDropdown = document.getElementById('mobile-dropdown');
-        const desktopDropdownBtn = document.getElementById('desktop-dropdown-btn');
-        const desktopDropdown = document.getElementById('desktop-dropdown');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-
-        mobileDropdownBtn.addEventListener('click', () => {
-            mobileDropdown.classList.toggle('active');
-        });
-
-        desktopDropdownBtn.addEventListener('click', (event) => {
-            event.stopPropagation();
-            desktopDropdown.classList.toggle('active');
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!desktopDropdown.contains(event.target) && event.target !== desktopDropdownBtn) {
-                desktopDropdown.classList.remove('active');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+            const mobileDropdown = document.getElementById('mobile-dropdown');
+            const desktopDropdownBtn = document.getElementById('desktop-dropdown-btn');
+            const desktopDropdown = document.getElementById('desktop-dropdown');
+        
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+        
+            if (mobileDropdownBtn && mobileDropdown) {
+                mobileDropdownBtn.addEventListener('click', () => {
+                    mobileDropdown.classList.toggle('active');
+                });
+            }
+        
+            if (desktopDropdownBtn && desktopDropdown) {
+                desktopDropdownBtn.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    desktopDropdown.classList.toggle('active');
+                });
+        
+                document.addEventListener('click', (event) => {
+                    if (!desktopDropdown.contains(event.target) && event.target !== desktopDropdownBtn) {
+                        desktopDropdown.classList.remove('active');
+                    }
+                });
             }
         });
- </script>
+        </script>
 
 
 
