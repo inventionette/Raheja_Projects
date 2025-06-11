@@ -115,45 +115,6 @@ a {
     flex-shrink: 0; /* Prevents the footer from shrinking */
 }
 
-/* Responsive Styles */
-
-/* Mobile Devices (max-width: 768px) */
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-
-    .menu-button {
-        display: block;
-    }
-
-    .landing h1 {
-        font-size: 2rem;
-    }
-
-    .landing p {
-        font-size: 1rem;
-        max-width: 400px;
-        line-height: 1.5;
-        font-weight: bold;
-    }
-
-    .statement {
-        font-size: 12px;
-        max-width: 330px;
-        margin-top: 10px;
-    }
-
-    .frontlogo {
-        width: 250px;
-    }
-
-    .footer {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-}
-
 /* Tablet Devices (max-width: 1024px) */
 @media (max-width: 1024px) {
     .landing h1 {
@@ -231,3 +192,60 @@ a {
         font-size: 1.2rem;
     }
 }
+
+
+@media (max-width: 768px) {
+  .landing {
+    padding: 40px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .frontlogo {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .landing p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 15px 20px;
+    font-weight: 500;
+  }
+
+  .statement {
+    font-size: 10px;
+    max-width: 95%;
+    line-height: 1.6;
+    margin: 10px 0 30px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .landing h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    padding: 15px !important;
+    font-size: 0.1rem !important;
+    line-height: 1.1 rem !important;
+}
+  .footer a {
+    font-size: 20px !important;
+    margin: 0 8px !important;
+  }
+  .text-block {
+    padding: 15px 15px;
+    font-size: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .text-block p {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+}
+

@@ -250,11 +250,23 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .project-images img {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px; /* adds spacing on the sides */
+    box-sizing: border-box;
+  }
+
   .project-details-card {
-    padding: 15px 20px;
-    font-size: 15px;
+    margin: 15px auto 0;
+    padding: 15px 18px;
+    font-size: 14.5px;
+    border-radius: 8px;
+    width: calc(100% - 30px); /* same 15px padding on each side */
+    box-sizing: border-box;
   }
 }
+
 
 
         footer {
@@ -301,11 +313,12 @@ a:hover {
             color: #ccc; 
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .footer-content .social-links {
-                flex-direction: column; 
-                gap: 10px;
-            }
-        }
+  .footer-content .social-links {
+    flex-direction: row; /* keep them side by side */
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* allows wrapping if needed */
+  }
+}
 

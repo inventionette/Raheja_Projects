@@ -351,3 +351,13 @@ p {
         font-size: 0.9rem; /* Adjust font size for very small screens */
     }
 }
+
+
+        @media (max-width: 768px) {
+  .footer-content .social-links {
+    flex-direction: row; /* keep them side by side */
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* allows wrapping if needed */
+  }
+}
