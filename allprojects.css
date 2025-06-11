@@ -1,7 +1,21 @@
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+.project-section {
+  flex-grow: 1;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding: 0;
     color: #ffffff;
     line-height: 1.6;
     background-image: url(assets/bg.png); 
@@ -144,75 +158,103 @@ body::before {
 
 }
 
-.projects-section {
-    padding: 40px 20px; 
-    text-align: center;
+.project-section {
+  min-height: 50vh; /* Adjust to taste */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.section-title {
-    font-size: 36px;
-    margin-bottom: 20px;
+.project-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #cccccc;
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-images img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.03);
+}
+
+a {
     color: #ffffff;
-}
-
-a { 
-    color: rgb(240, 240, 240);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
-
 a:hover {
-    color: rgb(204, 204, 204);
-    text-decoration: underline;
+    color: #cccccc;
 }
 
-.project-details {
-    padding-left: 100px;  
+@media (max-width: 600px) {
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .project-images {
+    gap: 15px;
+  }
+
+  dialog#img-dialog {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  dialog#img-dialog img {
+    width: 100%;
+    height: auto;
+  }
 }
 
+.project-details-card {
+  background-color: rgba(82, 82, 82, 0.6); /* soft black */
+  color: #eee;
+  max-width: 1000px;
+  margin: 30px auto 0;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 768px) {
+  .project-details-card {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+}
 
 
         footer {
@@ -220,7 +262,7 @@ a:hover {
             color: white;
             padding: 20px 0;
             text-align: center;
-            margin-top: 50px; 
+            margin-top: 0;
         }
 
         .footer-content {

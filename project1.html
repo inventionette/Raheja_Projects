@@ -10,7 +10,7 @@
     
 </head>
 <body>
-
+ <div class="page-wrapper">
     <nav class="navbar">
         <div class="container1">
             <a href="index.html">
@@ -88,37 +88,38 @@
         });
     </script>
 
-<section class="projects-section">
-    <h2><a href="projects.html">< Return to Projects</a></h4>
-    <h1 class="section-title">RPS-23-001 </h1>
+
+<section class="project-section">
+  <div class="project-container">
+     <h2><a href="projects.html">< Return to Projects</a></h4>
+    <h2 class="project-title">RPS-23-001</h2>
+    <p class="project-description">
+      Shop Fitout done for a Pizza and Kebab Restaurant at Terrigal, NSW - 2250
+    </p>
+    <div class="project-images">
+      <img src="assets/projectsite1.png" alt="Shop Fitout View 1" onclick="openDialog(this)"> 
+      <img src="assets/projectsite2.png" alt="Shop Fitout View 2" onclick="openDialog(this)">
+    </div>
+    <div class="project-details-card">
+  <p>
+    This is where you can include extra project details if necessary.
+  </p>
+  </div>
+  <dialog id="img-dialog" onclick="this.close()">
+    <img id="dialog-img" src="" alt="Expanded View">
 </section>
 
 
-<section class="project-details">
-    <h4>Shop Fitout done for a Pizza and Kebab Restaurant at Terrigal, NSW - 2250  </h4>
-    <div class="project-image1">
-        <img src="assets/projectsite1.png" alt="RPS-23-001 Project Image" style ="width: 20%; height: auto;">
-    </div>
-    <div class="project-image2">
-        <img src="assets/projectsite2.png" alt="RPS-23-001 Project Image" style ="width: 20%; height: auto;">
-    </div>
-</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script>
+  function openDialog(img) {
+    const dialog = document.getElementById('img-dialog');
+    const dialogImg = document.getElementById('dialog-img');
+    dialogImg.src = img.src;
+    dialog.showModal();
+  }
+</script>
+</div>
     <footer>
     <div class="footer-content">
         <p>Check out our socials!</p>
@@ -136,6 +137,5 @@
         <p class="contact-info">Raheja Projects Pty Ltd ABN: 43 671 450 285 | 0401835568 | navneet@raheja.au<br>Located on the Central Coast</p>
     </div>
 </footer>
-
 </body>
 </html>

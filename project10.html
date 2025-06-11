@@ -10,7 +10,7 @@
     
 </head>
 <body>
-
+<div class="page-wrapper">
     <nav class="navbar">
         <div class="container1">
             <a href="index.html">
@@ -88,21 +88,36 @@
         });
     </script>
 
-<section class="projects-section">
-    <h2><a href="projects.html">< Return to Projects</a></h4>
-    <h1 class="section-title">RPS-24-009 </h1>
+
+
+<section class="project-section">
+  <div class="project-container">
+     <h2><a href="projects.html">< Return to Projects</a></h4>
+    <h2 class="project-title">RPS-24-009</h2>
+    <p class="project-description">
+      Proposed Residence, Greystanes, NSW 2145
+    </p>
+    <div class="project-images">
+      <img src="assets/projectsite19.png" alt="Shop Fitout View 1" onclick="openDialog(this)"> 
+      <img src="assets/projectsite20.png" alt="Shop Fitout View 2" onclick="openDialog(this)">
+    </div>
+    <div class="project-details-card">
+  <p>
+    This is where you can include extra project details if necessary.
+  </p>
+  </div>
+  <dialog id="img-dialog" onclick="this.close()">
+    <img id="dialog-img" src="" alt="Expanded View">
 </section>
 
-
-<section class="project-details">
-    <h4>Proposed Residence, Greystanes, NSW 2145  </h4>
-    <div class="project-image1">
-        <img src="assets/projectsite19.png" alt="RPS-24-001" style ="width: 20%; height: auto;">
-    </div>
-    <div class="project-image2">
-        <img src="assets/projectsite20.png" alt="RRPS-24-001" style ="width: 20%; height: auto;">
-    </div>
-</section>
+<script>
+  function openDialog(img) {
+    const dialog = document.getElementById('img-dialog');
+    const dialogImg = document.getElementById('dialog-img');
+    dialogImg.src = img.src;
+    dialog.showModal();
+  }
+</script>
 
 
 
@@ -118,7 +133,7 @@
 
 
 
-
+</div>
     <footer>
     <div class="footer-content">
         <p>Check out our socials!</p>
