@@ -1,31 +1,31 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-    line-height: 1.6;
-    background-image: url(assets/bg.png); /* Add your background image URL here */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
-}
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            line-height: 1.6;
+            background-image: url(assets/bg.png); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+        }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(49, 49, 49, 0.8); /* Semi-transparent white overlay */
-    z-index: -1; /* Places the overlay behind the content */
-}
-
+        /* Overlay to ensure text readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(49, 49, 49, 0.8); /* Semi-transparent white overlay */
+            z-index: -1; /* Places the overlay behind the content */
+        }
 .containercontact {
     max-width: 1200px;
     margin: 50px auto;
     padding: 80px;
-    background: #686868;
+    background: rgba(78, 77, 77, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -286,7 +286,11 @@ p {
 .team-member {
     display: flex;
     align-items: flex-start; /* Align items to the top */
-    margin-bottom: 20px; /* Add spacing between team members */
+    gap: 20px;
+}
+
+.image-wrapper {
+    margin-top: 30px; /* Fine-tune vertically if needed */
 }
 
 .team-member .image-wrapper {
@@ -304,43 +308,55 @@ p {
 }
 
 .team-member .position {
-    margin-top: 10px; /* Add spacing between the image and position text */
-    font-size: 0.8rem;
-    color: #d7d7d7; /* Adjust text color */
-    text-align: center; /* Center align the position text */
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #d7d7d7;
+    line-height: 1.4;
+    text-align: left; /* change from center */
+    max-width: 220px; /* optional: limits text width so it's not super wide */
 }
 
 .team-member .text {
-    flex: 1; /* Allow the text to take up the remaining space */
-    color: #ffffff; /* Ensure text color is visible */
-    line-height: 1.6; /* Improve readability */
-    margin-top: -20px; /* Add spacing between the image and text */
-    font-size: 1.1rem; /* Adjust font size for better readability */    
-    text-align: left; /* Align text to the left */
-
+    flex: 1;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-top: 0; /* Remove negative margin */
+    font-size: 1.1rem;
+    text-align: justify; /* Justify aligns both left and right edges */
+    padding-right: 10px; /* Slight right padding to keep clean edge */
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .team-member {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center; /* Center align content */
+        flex-direction: column;
+        align-items: flex-start; /* Align to the left instead of center */
     }
 
     .team-member .image-wrapper {
-        margin-right: 0; /* Remove right margin for smaller screens */
-        margin-bottom: 20px; /* Add spacing below the image */
+        margin-right: 0;
+        margin-bottom: 15px;
+        align-items: flex-start; /* Ensure contents inside are left-aligned */
+        text-align: left; /* Align the role text */
     }
 
     .team-member img {
-        width: 200px; /* Reduce image size for smaller screens */
+        width: 180px; /* Adjust for smaller screens */
     }
 
     .team-member .text {
-        text-align: center; /* Center align text for smaller screens */
-        font-size: 1rem; /* Adjust font size for readability */
+        text-align: left;
+        padding: 0 10px 0 0;
+        width: 100%;
     }
 }
+
+@media (max-width: 768px) {
+    .team-member .position {
+        text-align: left;
+        padding-left: 5px; /* optional: subtle indent */
+    }
+}
+
 
 @media (max-width: 480px) {
     .team-member img {
