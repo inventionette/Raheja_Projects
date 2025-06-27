@@ -53,7 +53,7 @@ p {
 .contact-details {
     text-align: left;
     margin-bottom: 40px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .contact-details p {
@@ -104,6 +104,7 @@ p {
     height: 400px;
     border: none;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 

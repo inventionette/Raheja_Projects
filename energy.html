@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title>CC Approvals</title>
+    <title>Energy Assessments & BASIX</title>
     <style>
-        /* General Styles */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             color: #ffffff;
             line-height: 1.6;
-            background-image: url(assets/bg.png); /* Add your background image URL here */
+            background-image: url(assets/bg.png);
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+            background-attachment: fixed;
         }
 
         /* Overlay to ensure text readability */
@@ -27,15 +26,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(49, 49, 49, 0.8); /* Semi-transparent white overlay */
-            z-index: -1; /* Places the overlay behind the content */
+            background: rgba(49, 49, 49, 0.8);
+            z-index: -1; 
         }
 
         .container {
-            max-width: 1200px; /* Wider container */
-            margin: 50px auto; /* Centered horizontally */
+            max-width: 1200px; 
+            margin: 50px auto; 
             background: rgba(107, 107, 107, 0.16);
-            padding: 40px; /* Increased padding for better spacing */
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -57,30 +56,31 @@
         p {
             font-size: 1.1rem;
             color: #ffffff;
-            margin-bottom: 20px; /* Added spacing between paragraphs */
-            flex: 1;
-            color: #ffffff;
-            line-height: 1.6;
-            margin-top: 0; /* Remove negative margin */
-            font-size: 1.1rem;
-            text-align: justify; /* Justify aligns both left and right edges */
+            margin-bottom: 20px;
+             flex: 1;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-top: 0; /* Remove negative margin */
+    font-size: 1.1rem;
+    text-align: justify; /* Justify aligns both left and right edges */
+    padding-right: 10px; /* Slight right padding to keep clean edge */
         }
 
         .content-wrapper {
             display: flex;
-            align-items: center; /* Vertically center the image and text */
-            gap: 40px; /* Space between image and text */
+            align-items: center; 
+            gap: 40px; 
         }
 
         .content-wrapper img {
-            max-width: 400px; /* Smaller image width */
+            max-width: 400px;
             height: auto;
             border-radius: 10px;
-            flex-shrink: 0; /* Prevent the image from shrinking */
+            flex-shrink: 0; 
         }
 
         .text-content {
-            flex: 1; /* Allow text to take up remaining space */
+            flex: 1; 
         }
 
         ul {
@@ -97,7 +97,7 @@
             color: white;
             padding: 20px 0;
             text-align: center;
-            margin-top: 50px; /* Add space above the footer */
+            margin-top: 50px; 
         }
 
         .footer-content {
@@ -111,7 +111,7 @@
         .footer-content p {
             margin: 5px 0;
             font-size: 18px;
-            color: white; /* Ensure text is white */
+            color: white;
         }
 
         .footer-content .social-links {
@@ -127,19 +127,19 @@
         }
 
         .footer-content .social-links a:hover {
-            opacity: 0.8; /* Add hover effect */
+            opacity: 0.8; 
         }
 
         .footer-content .contact-info {
             margin-top: 15px;
             font-size: 14px;
-            color: #ccc; /* Slightly lighter text for contact info */
+            color: #ccc; 
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .content-wrapper {
-                flex-direction: column; /* Stack image and text on smaller screens */
+                flex-direction: column; 
             }
 
             .content-wrapper img {
@@ -274,6 +274,16 @@
     display: flex;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -340,15 +350,15 @@
                     <ul id="desktop-dropdown" class="dropdown-menu">
                         <li><a href="test.html"  class="dropdown-item">Planning</a></li>
                         <li><a href="design.html"  class="dropdown-item">Design</a></li>
-                        <li><a href="ecology.html"  class="dropdown-item">Ecology</a></li>
-                        <li><a href="geotech.html" class="dropdown-item">Geotech Services</a></li>
+                        <li><a href="ecology.html" class="dropdown-item">Ecology</a></li>
+                        <li><a href="geotech.html"  class="dropdown-item">Geotech Services</a></li>
                         <li><a href="bushfire.html"  class="dropdown-item">Bushfire</a></li>
                         <li><a href="stormwater.html"  class="dropdown-item">Stormwater</a></li>
                         <li><a href="structuraldesign.html"  class="dropdown-item">Structural Design</a></li>
-                        <li><a href="da.html"  class="dropdown-item">DA Approvals</a></li>
-                        <li><a href="cc.html"  class="dropdown-item">CC Approvals</a></li>
-                        <li><a href="anim.html"  class="dropdown-item">3D Animation</a></li>
-                        <li><a href="energy.html"  class="dropdown-item">BASIX Energy Assessments</a></li>
+                        <li><a href="da.html"   class="dropdown-item">DA Approvals</a></li>
+                        <li><a href="cc.html"   class="dropdown-item">CC Approvals</a></li>
+                        <li><a href="anim.html"   class="dropdown-item">3D Animation</a></li>
+                        <li><a href="energy.html" class="dropdown-item">Energy Assessments & BASIX</a></li>
                     </ul>
                 </li>
                 <li><a href="projects.html"  class="nav-link">Projects</a></li>
@@ -374,7 +384,7 @@
                 </ul>
             </div>
             <a href="projects.html" class="nav-link">Projects</a>
-            <a href="ourteam.html" class="nav-link">Our Team</a>
+            <a href="ourteam.css" class="nav-link">Our Team</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </div>
     </nav>
@@ -406,45 +416,44 @@
         });
     </script>
 <div class="container">
-    <h1>CC Approvals</h1>
+    <h1>BASIX Energy Assessments</h1>
     <div class="content-wrapper">
-        <img src="assets/9.png" alt="Service Image"> <!-- Smaller image -->
+        <img src="assets/energy.png" alt="Service Image"> <!-- Smaller image -->
         <div class="text-content">
             <p>
-                At Raheja Projects, we provide comprehensive civil engineering and Construction Certificate (CC) approval services to ensure your project meets all regulatory and technical requirements before construction begins. Our team of experienced engineers and approval specialists works diligently to prepare and review detailed construction documentation, including engineering designs, stormwater management plans, and compliance reports.
+           At Raheja Projects, we’re committed to designing buildings that are not only efficient but compliant with NSW sustainability standards. Our Energy Assessment and BASIX services help you meet environmental targets while improving comfort, performance, and long-term value. Whether you're building a new home, duplex, or small commercial project, we ensure your development meets all energy efficiency regulations from the ground up.
             </p>
         </div>
     </div>
-    <h2>Comprehensive CC Approval Services</h2>
+    <h2>Detailed Thermal Performance Assessments</h2>
     <p>
-        We provide expert support for obtaining Construction Certificates (CC), ensuring your project is ready for construction in compliance with all building regulations and approved development plans. Our team handles the process efficiently, so you can focus on bringing your project to life.
+       We evaluate the thermal efficiency of your project based on orientation, insulation, window performance, ventilation, and material choices. These assessments are essential in determining how your building retains or loses heat ensuring it stays cool in summer and warm in winter with minimal energy use.
     </p>
     
-    <h2>CC Documentation Preparation</h2>
+    <h2>Accurate BASIX Certificate Reports</h2>
     <p>
-        We prepare all required documentation, including detailed construction drawings, specifications, engineering certifications, and compliance reports, ensuring they align with your approved Development Application (DA) or Complying Development Certificate (CDC).
+       BASIX (Building Sustainability Index) is a NSW planning requirement for most new residential buildings and significant alterations. We prepare and issue BASIX certificates that meet the specific energy, water, and thermal comfort targets for your development, streamlining your DA or CC process.
     </p>
     
-    <h2>Compliance with Building Codes</h2>
+    <h2>Energy Modelling for Compliance & Cost Savings</h2>
     <p>
-        Our team ensures your project meets all requirements of the National Construction Code (NCC), Australian Standards, and other relevant regulations to achieve CC approval.
+    Using accredited software and in-depth modelling, our energy reports identify areas for improvement and optimisation. From efficient lighting and hot water systems to passive solar design strategies, our insights help reduce energy bills and boost compliance in one go.
     </p>
     
-    <h2>BASIX and Sustainability Requirements</h2>
+    <h2>Approvals Support & Council Submissions</h2>
     <p>
-        We ensure your project adheres to Building Sustainability Index (BASIX) commitments, including energy efficiency, water conservation, and thermal performance standards.
-
+    Our team works closely with certifiers, councils, and builders to ensure your Energy Assessment and BASIX documents are accepted without delays. We stay across the latest policy updates and regional variations so you don’t have to.
     </p>
     
-    <h2>Services and Infrastructure Coordination</h2>
+    <h2>Tailored Solutions for All Project Types</h2>
     <p>
-        We coordinate with utility providers to confirm that services such as water, sewerage, electricity, and stormwater drainage meet the necessary standards for construction.
+    From suburban homes to multi-unit developments and boutique commercial builds, we tailor every report to the specific needs of your project. No templates or guesswork—just expert advice backed by experience and compliance certainty.
     </p>
 
 </div>
 
 <!-- Footer -->
-<footer class="footer">
+<footer    class="footer">
     <div class="footer-content">
         <p>Check out our socials!</p>
         <div class="social-links">
